@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.32.4.45862",
+      "templateHash": "9461926575397854067"
+    }
+  },
+  "parameters": {
+    "envNickname": {
+      "type": "string"
+    },
+    "urlUniqueifier": {
+      "type": "string",
+      "minLength": 1,
+      "metadata": {
+        "description": "Pick something that will help you ensure that your URL is unique -- maybe your name followed by the current date"
+      }
+    }
+  },
+  "variables": {
+    "solutionName": "eureka",
+    "location": "centralus"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2022-09-01",
+      "name": "[format('{0}-rg-{1}', variables('solutionName'), parameters('envNickname'))]",
+      "location": "[variables('location')]"
+    }
+  ]
+}
