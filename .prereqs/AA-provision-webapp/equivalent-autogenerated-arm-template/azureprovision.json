@@ -4,20 +4,13 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.32.4.45862",
-      "templateHash": "9461926575397854067"
+      "version": "0.33.93.31351",
+      "templateHash": "3079760172994743937"
     }
   },
   "parameters": {
     "envNickname": {
       "type": "string"
-    },
-    "urlUniqueifier": {
-      "type": "string",
-      "minLength": 1,
-      "metadata": {
-        "description": "Pick something that will help you ensure that your URL is unique -- maybe your name followed by the current date"
-      }
     }
   },
   "variables": {
